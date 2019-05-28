@@ -51,7 +51,7 @@ module Administrate
 
       def attributes
         klass.reflections.keys +
-          klass.columns.map(&:name) -
+          klass.attribute_names -
           redundant_attributes
       end
 
